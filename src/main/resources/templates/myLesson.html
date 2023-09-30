@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>My Lesson</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+	<div>
+		<table class="table table-success table-striped table-bordered w-50">
+		  <thead>
+		    <tr>
+		      
+		      <th scope="col">Lesson Id</th>
+		      <th scope="col">Lesson Name</th>
+		      <th scope="col">Lesson Topics</th>
+		      <th scope="col">Lessons link</th>
+		      <th scope="col">Course Id</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  
+		    <tr >
+		      <td th:text="${lesson.lessonId}"></td>
+		      <td th:text="${lesson.lessonName}"></td>
+		      <td th:text="${lesson.topics}"></td>
+		      <td th:text="${lesson.link}"></td>
+		      <td th:text="${lesson.course.courseId}"></td>
+		    </tr>
+	    
+		  </tbody>
+	</table>
+	
+	</div>
+	  
+	<div class="container">
+		
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Tl4bQBfOtbg" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+		clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+		web-share" allowfullscreen></iframe>
+	</div>
+	 
+	<div class="container">
+		<h2>Leave a comment here:</h2>
+		<form action="/addComment" method="post">
+			<textarea name="comment" ></textarea>
+			<input type="submit" value="Add Comment">
+		</form>
+	</div>
+</body>
+</html>
